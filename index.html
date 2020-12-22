@@ -21,7 +21,7 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="#" class="navbar-brand mr-auto">Don Diego Development</a>
+            <a href="#" class="navbar-brand mr-auto"><img src="img/logo.png" height="30" width="41" alt=""></a>
             <div id="Navbar" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"><a href="index.html" class="nav-link"><span class="fa fa-home fa-lg">Home</span></a></li>
@@ -38,10 +38,15 @@
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
-                    <h1>Desarrollo FullStack whit REACT.js</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <h1>Restaurante con Fusion</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur sint quis odio qui autem doloribus fugiat magnam ipsum?</p>
                 </div>
-                <div class="col-12 col-sm"></div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/logo.png" class="img-fluid" alt="Logo">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <button type="submit" id="reserve" class="btn btn-warning text-black pl-5 pr-5"><a href="#reserva" style="text-decoration: none; color: black;"><strong>Reserve Table</strong></a></button>
+                </div>
             </div>
         </div>
     </header>
@@ -55,29 +60,113 @@
             </div>
 
             <div class="col col-sm order-sm-first col-md">
-                <h2>Node.js</h2>
-                <p>Ideado como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node.js está diseñado para crear aplicaciones network escalables. En el siguiente ejemplo de "hola mundo", pueden atenderse muchas conexiones simultáneamente.
-                    Por cada conexión, se activa la devolución de llamada o callback, pero si no hay trabajo que hacer, Node.js se dormirá.</p>
+                <div class="media">
+                    <img src="img/uthappizza.png" class="d-flex mr-3 img-thumbnail align-self-center" alt="Pizza">
+                    <div class="media-body">
+                        <h2 class="mt-0">Node.js <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span> </h2>
+                        <p class="d-none d-md-none d-lg-block">Ideado como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node.js está diseñado para crear aplicaciones network escalables. En el siguiente ejemplo de "hola mundo", pueden atenderse muchas conexiones simultáneamente.
+                            Por cada conexión, se activa la devolución de llamada o callback, pero si no hay trabajo que hacer, Node.js se dormirá.</p>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 col-md-3">
-                <h2>HTML</h2>
+                <h2>This Month's Promotions</h2>
+            </div>
+            <div class="col col-sm col-md">
+                <div class="media">
+                    <img src="img/buffet.png" class="d-flex ml-3 img-thumbnail order-last  aling-self-center img-fluid" alt="Buffet">
+                    <div class="media-body">
+                        <h3> Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h3>
+                        <p class="d-none d-md-none d-lg-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed placeat facilis autem quos quia ullam at. Quibusdam, architecto optio neque hic nemo provident doloremque quisquam tempora, excepturi aspernatur ullam repudiandae.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="col col-sm col-md">
-                <h3>CSS3 - Bootstrap 4</h3>
-            </div>
         </div>
 
         <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last  col-md-3">
-                <h2>JavasCript</h2>
+            <div class="col-12 col-sm-4 col-md-3">
+                <h3>Meet our Culinary Specialists</h3>
             </div>
 
             <div class="col col-sm order-sm-first  col-md">
-                <h3>CallBack</h3>
+                <div class="media">
+                    <img src="img/diego.jpg" class="d-flex mr-3 img-thumbnail align-self-center img-fluid w-25" alt="Dieg Contador">
+                    <div class="media-body">
+                        <h3 class="mt-0">Diego Contador</h3>
+                        <h5 class="mt-0">Tecnólogo en Desarrollo de Software</h5>
+                        <p class="d-none d-md-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia debitis velit nostrum eligendi magni error Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia debitis velit nostrum eligendi magni error</p>
+                        <p class="d-none d-md-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia debitis velit nostrum eligendi magni error Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia debitis velit nostrum eligendi magni error</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row row-content" id="reserva">
+            <div class="col-sm-8 offset-sm-2">
+                <dl class="card">
+                    <h1 class="card-header bg-warning text-white">Reserve a Table</h1>
+                    <div class="card-body">
+                        <dl class="row">
+                            <dt class="col-sm-3">Number of Guests</dt>
+                            <dd class="col-md-9  d-flex mt-2">
+                                <div class="form-check mr-4">
+                                    <input class="form-check-input" id="1" type="radio" value="option">
+                                    <label class="form-check-label" for="1"><strong> 1</strong></label>
+                                </div>
+                                <div class="form-check mr-4">
+                                    <input type="radio" class="form-check-input" id="2" value="option">
+                                    <label class="form-check-label" for="2"><strong> 2</strong></label>
+                                </div>
+                                <div class="form-check mr-4">
+                                    <input type="radio" class="form-check-input" id="3" value="option">
+                                    <label class="form-check-label" for="3"><strong> 3</strong></label>
+                                </div>
+                                <div class="form-check mr-4">
+                                    <input class="form-check-input" type="radio" id="4" value="option">
+                                    <label class="form-check-label" for="4"><strong> 4</strong></label>
+                                </div>
+                                <div class="form-check mr-4">
+                                    <input type="radio" value="option" id="5" class="form-check-input">
+                                    <label for="5" class="form-check-label"><strong> 5</strong></label>
+                                </div>
+                                <div class="form-check mr-4">
+                                    <input type="radio" value="option" id="6" class="form-check-input">
+                                    <label class="form-check-label" for="6"><strong> 6</strong></label>
+                                </div>
+                            </dd>
+
+                            <dt class="col-sm-2 col-md-3 mt-4">Date and Time</dt>
+                            <dd class="col-sm-10 col-md-9 mt-4">
+
+                                <form>
+                                    <div class="form-group row">
+                                        <div class="col-sm-5 col-md-5">
+                                            <input class="form-control" type="date" placeholder="Date">
+                                        </div>
+
+
+                                        <div class="col-sm-5 col-md-4">
+                                            <input class="form-control" type="time" placeholder="Time">
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </dd>
+
+                            <dd class="col-sm-2 offset-md-3">
+                                <button class="btn btn-primary">Reserve</button>
+                            </dd>
+
+                        </dl>
+                    </div>
+                </dl>
             </div>
         </div>
     </div>
