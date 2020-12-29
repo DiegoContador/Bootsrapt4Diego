@@ -4,6 +4,19 @@ $background-light: #9575CD;
 $background-pale: #D1C4E9;
 // Height variables
 $carousel-item-height: 300px;
+.fondoModal {
+    background-color: $background-dark;
+}
+
+.close {
+    color: $background-pale;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: $background-pale;
+}
+
 @mixin zero-margin($pad-up-dn: 0px, $pad-left-right: 0px) {
     margin: 0px auto;
     padding: $pad-up-dn $pad-left-right;
