@@ -108,7 +108,7 @@
                         </div>
                         <div class="carousel-item">
                             <img src="img/buffet.png" alt="buffet" class="d-block img-fluid">
-                            <div class="carousel-caption d-none-d-md-block">
+                            <div class="carousel-caption d-none d-md-block">
                                 <h3> Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h3>
                                 <p class="d-none d-md-none d-lg-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed placeat facilis autem quos quia ullam at. Quibusdam, architecto optio neque hic nemo provident doloremque quisquam tempora, excepturi aspernatur ullam repudiandae.</p>
                             </div>
@@ -134,14 +134,11 @@
                     <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
-                    <div class="btn-group" id="carouselButton">
-                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
                             <span class="fa fa-pause"></span>
                         </button>
-                        <button class="btn btn-danger btn-sm" id="carousel-play">
-                            <span class="fa fa-play"></span>
-                        </button>
-                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -172,7 +169,7 @@
             </div>
             <div class="col col-sm col-md">
                 <div class="media">
-                    <img src="img/buffet.png" class="d-flex ml-3 img-thumbnail order-last  aling-self-center img-fluid" alt="Buffet">
+                    <img src="img/buffet.png" class="d-flex ml-3 img-thumbnail order-last align-self-center img-fluid" alt="Buffet">
                     <div class="media-body">
                         <h3> Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h3>
                         <p class="d-none d-md-none d-lg-block">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed placeat facilis autem quos quia ullam at. Quibusdam, architecto optio neque hic nemo provident doloremque quisquam tempora, excepturi aspernatur ullam repudiandae.</p>
@@ -333,12 +330,20 @@
             $('#mycarousel').carousel({
                 interval: 2000
             });
-            $('#carousel-pause').click(function() {
-                $('#mycarousel').carousel('pause');
+            $('#carouselButton').onclick(function() {
+                if ($('#carouselButton').children('span').hasClass('fa-pause')) {
+
+                    $('#mycarousel').carousel('pause');
+                    $('#carouselButton').children('span').removeClass('fa-pause');
+                    $('#carouselButton').children('span').addClass('fa-play');
+
+                } else if ($('#carouselButton').children('span').hasClass('fa-play')) {
+                    $('#mycarousel').carousel('cycle');
+                    $('#carouselButton').children('span').removeClass('fa-play');
+                    $('#carouselButton').children('span').addClass('fa-pause');
+                }
             });
-            $('#carousel-play').click(function() {
-                $('#mycarousel').carousel('cycle');
-            });
+
         });
     </script>
 </body>
